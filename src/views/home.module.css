@@ -24,6 +24,7 @@
 }
 .Nav {
   flex: 0 0 auto;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -87,6 +88,41 @@
   width: var(--dl-size-size-xsmall);
   height: var(--dl-size-size-xsmall);
 }
+.Banner {
+  width: 100%;
+  display: flex;
+  padding: var(--dl-space-space-threeunits);
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.text1 {
+  font-size: 3rem;
+  text-align: center;
+}
+.text2 {
+  max-width: var(--dl-size-size-maxwidth);
+  margin-top: var(--dl-space-space-twounits);
+  text-align: center;
+  margin-bottom: var(--dl-space-space-twounits);
+}
+.BtnGroup {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.button {
+  color: var(--dl-color-gray-white);
+  transition: 0.3s;
+  padding-top: var(--dl-space-space-unit);
+  padding-left: var(--dl-space-space-twounits);
+  padding-right: var(--dl-space-space-twounits);
+  padding-bottom: var(--dl-space-space-unit);
+  background-color: var(--dl-color-gray-black);
+}
+.button:hover {
+  transform: scale(1.02);
+}
 @media(max-width: 767px) {
   .Header {
     padding-left: var(--dl-space-space-twounits);
@@ -100,6 +136,14 @@
     align-items: center;
     justify-content: center;
   }
+  .Banner {
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+  }
+  .text2 {
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+  }
 }
 @media(max-width: 479px) {
   .Header {
@@ -107,5 +151,14 @@
   }
   .MobileMenu {
     padding: 16px;
+  }
+  .Banner {
+    padding-top: var(--dl-space-space-twounits);
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+    padding-bottom: var(--dl-space-space-twounits);
+  }
+  .BtnGroup {
+    flex-direction: column;
   }
 }

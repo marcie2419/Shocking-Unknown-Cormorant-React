@@ -3,6 +3,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 
 import NavigationLinks from '../components/navigation-links'
+import projectStyles from '../style.module.css'
 import styles from './home.module.css'
 
 const Home = (props) => {
@@ -18,9 +19,7 @@ const Home = (props) => {
           src="/playground_assets/mtech-1400w.png"
           className={styles['image']}
         />
-        <div className={styles['Nav']}>
-          <NavigationLinks rootClassName="rootClassName17"></NavigationLinks>
-        </div>
+        <div className={styles['Nav']}></div>
         <div data-type="BurgerMenu" className={styles['BurgerMenu']}>
           <svg viewBox="0 0 1024 1024" className={styles['Icon']}>
             <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
@@ -68,6 +67,27 @@ const Home = (props) => {
         </div>
       </header>
       <h1>Welkom bij de website van de Camping app!</h1>
+      <div className={styles['Banner']}>
+        <h1 className={styles['text1']}>Op vakantie zonder zorgen</h1>
+        <span className={styles['text2']}>
+          <span>
+            <span>
+              De app bevat allerlei handige functies om zorgeloos op vakantie te
+              gaan. Ga wandelen met de ingebouwde boordcomputer, of naar de
+              winkel in de buurt. Er staat ook bij wanneer de service open is en
+              hoever het rijden is! Voor de autorit zijn er ook leuke spelletjes
+              te doen.
+            </span>
+          </span>
+        </span>
+        <div className={styles['BtnGroup']}>
+          <button
+            className={` ${styles['button']} ${projectStyles['button']} `}
+          >
+            Download nu!
+          </button>
+        </div>
+      </div>
     </div>
   )
 }
